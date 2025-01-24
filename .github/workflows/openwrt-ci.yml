@@ -23,6 +23,12 @@ jobs:
     runs-on: ubuntu-24.04
 
     steps:
+      - name: Sync fork
+        run: |
+          git remote add openwrt https://github.com/coolsnowwolf/lede.git
+          git pull openwrt master
+          git remote -v
+    
       - name: Space cleanup and Initialization environment
         env:
           DEBIAN_FRONTEND: noninteractive
