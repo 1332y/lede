@@ -25,8 +25,8 @@ jobs:
     steps:
       - name: Sync fork
         run: |
-          git remote add openwrt https://github.com/coolsnowwolf/lede.git
-          git pull openwrt master
+          git remote add lede https://github.com/coolsnowwolf/lede.git
+          git pull lede master
           git remote -v
     
       - name: Space cleanup and Initialization environment
